@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
+import useNavigationStore from "../store/useNavigationStore";
 import "../styles/sidebar.scss";
 
 const Sidebar = () => {
+  const setSection = useNavigationStore((state) => state.setSection);
+
   return (
     <nav className="sidebar">
-      <h2><li><Link to="/">Gamalyst</Link></li></h2>
+      <h2>Gamalyst</h2>
       <ul>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/analytics">Analytics</Link></li>
-        <li><Link to="/settings">Settings</Link></li>
+        <li><button onClick={() => setSection("overview")}>Overview</button></li>
+        <li><button onClick={() => setSection("reddit")}>Reddit</button></li>
+        <li><button onClick={() => setSection("insights")}>Insights</button></li>
+        <li><button onClick={() => setSection("outreach")}>Outreach</button></li>
+        <li><button onClick={() => setSection("testing")}>Testing</button></li>
+        <li><button onClick={() => setSection("account")}>Account</button></li>
+        <li><button onClick={() => setSection("settings")}>Settings</button></li>
       </ul>
     </nav>
   );
