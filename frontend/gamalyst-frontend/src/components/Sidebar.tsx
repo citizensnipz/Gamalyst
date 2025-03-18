@@ -1,12 +1,14 @@
 import useNavigationStore from "../store/useNavigationStore";
 import "../styles/sidebar.scss";
+import gamalystLogoLight from "../../public/gamalystLogoLight.png";
 
 const Sidebar = () => {
   const setSection = useNavigationStore((state) => state.setSection);
 
   return (
     <nav className="sidebar">
-      <h2>Gamalyst</h2>
+            <img src={gamalystLogoLight} alt="Gamalyst Logo" className="sidebar-logo" />
+            <h2 className="sidebar-title">Gamalyst</h2>
       <ul>
         <li><button onClick={() => setSection("overview")}>Overview</button></li>
         <li><button onClick={() => setSection("reddit")}>Reddit</button></li>

@@ -30,28 +30,16 @@ const VoteLineChart = () => {
   ];
 
   return (
-    <div style={{ height: 400 }}>
+    <div style={{ width: "100%", height: "100%", maxWidth: "90%", maxHeight: "90%" }}>
       <ResponsiveLine
         data={data}
-        margin={{ top: 20, right: 50, bottom: 50, left: 50 }}
+        margin={{ top: 20, right: 40, bottom: 40, left: 50 }}
         xScale={{ type: "point" }}
-        yScale={{ type: "linear", min: "auto", max: "auto", stacked: false }}
-        axisBottom={{
-          legend: "Time",
-          legendOffset: 36,
-          legendPosition: "middle",
-        }}
-        axisLeft={{
-          legend: "Votes",
-          legendOffset: -40,
-          legendPosition: "middle",
-        }}
+        yScale={{ type: "linear", min: "auto", max: "auto", stacked: true }}
+        axisBottom={{ tickSize: 5, tickPadding: 5, tickRotation: -30 }}
+        axisLeft={{ tickSize: 5, tickPadding: 5 }}
         colors={chartColors}
         theme={chartTheme}
-        pointSize={10}
-        pointBorderWidth={2}
-        pointBorderColor={{ from: "serieColor" }}
-        useMesh={true}
       />
     </div>
   );
