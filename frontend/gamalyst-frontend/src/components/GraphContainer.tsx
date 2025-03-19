@@ -12,20 +12,20 @@ const GraphContainer = () => {
     <div className="graph-container">
       {selectedPlatform === "reddit" && (
         <>
-          <div className="graph-card">
-            <h3>Vote Changes Over Time</h3>
+          <div className="graph-card chart1">
+            <h3 className="graph-title">Vote Changes Over Time</h3>
             <VoteLineChart />
           </div>
-          <div className="graph-card">
-            <h3>Subreddit Performance</h3>
+          <div className="graph-card chart2">
+            <h3 className="graph-title">Subreddit Performance</h3>
             <SubredditBarChart />
           </div>
-          <div className="graph-card">
-            <h3>Post Type Engagement</h3>
+          <div className="graph-card chart3">
+            <h3 className="graph-title">Post Type Engagement</h3>
             <PostTypePieChart />
           </div>
-          <div className="graph-card">
-            <h3>Engagement by Time of Day</h3>
+          <div className="graph-card chart4">
+            <h3 className="graph-title">Engagement by Time of Day</h3>
             <EngagementHeatmap />
           </div>
         </>

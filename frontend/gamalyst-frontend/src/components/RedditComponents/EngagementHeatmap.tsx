@@ -1,5 +1,5 @@
 import { ResponsiveHeatMap } from "@nivo/heatmap";
-import chartTheme from "../../styles/theme/theme";
+import heatmapTheme from "../../styles/theme/heatmapTheme";
 
 const EngagementHeatmap = () => {
   const rawData = [
@@ -20,14 +20,14 @@ const EngagementHeatmap = () => {
   }));
 
   return (
-    <div style={{ width: "100%", height: "100%", maxWidth: "90%", maxHeight: "90%" }}>
+    <div style={{ width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", paddingLeft: "2vw" }}>
       <ResponsiveHeatMap
         data={data}
         margin={{ top: 20, right: 40, bottom: 40, left: 50 }}
         axisTop={{ tickSize: 5, tickPadding: 5, tickRotation: -30 }}
         axisLeft={{ tickSize: 5, tickPadding: 5 }}
         colors={{ type: "sequential", scheme: "reds" }}
-        theme={chartTheme}
+        theme={heatmapTheme}
       />
     </div>
   );

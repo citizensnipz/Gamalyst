@@ -11,7 +11,7 @@ const SubredditBarChart = () => {
   ];
 
   return (
-    <div style={{ height: "300px" }}>
+    <div style={{ height: "90%", width: "90%" }}>
       <ResponsiveBar
         data={data}
         keys={["upvotes", "comments"]}
